@@ -18,7 +18,7 @@
             <label for="">Senha</label>
             <input type="senha" name id="senha" riquired>
  
-            <label for="">Perfil</label>
+            <label for="">Perfil:</label>
             <select name="perfil" id="perfil">
             <option value="admin">admin</option>
             <option value="gestor">gestor</option>
