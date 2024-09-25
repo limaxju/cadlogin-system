@@ -1,6 +1,6 @@
 <?php
 //Requer arquivo o arquivo user que contem o model user com as funções de manipulação de dados de usuario
-require_once 'models/user.php'
+require_once 'models/user.php';
 
 class AuthController
 {
