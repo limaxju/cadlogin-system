@@ -9,7 +9,7 @@ class UserController{
                 'nome' => $_POST['nome'],
                 'email' => $_POST['email'],
                 'senha' => password_hash ($_POST['senha'],PASSWORD_DEFAULT),//criptografa a senha
-                'perfil'=> $_POST['perfil'].
+                'perfil'=> $_POST['perfil']
             ];
             //chama o método insert para salvar os dados no banco de dados
             User::create($data);

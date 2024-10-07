@@ -1,22 +1,21 @@
 <?php
-
-//define classe Database, responsavel por gerenciar a conexão com banco de dados
-class Database 
-{
-    //padrão singleton, cujo o objetivo é garantir que apenas uma única instancia de classe seja criada  durante a execução do programa, e que essa instancia seja reutilizada sempre que ncessario 
+class Database{
+    // Utiliza o padrão Singleton, cujo objetivo é garantir que apenas uma única instância de uma classe seja criada durante a execução do programa, e que essa instância seja reutilizada sempre que necessário.
     private static $instance = null;
-
+ 
+    // Método público que retorna a conexão com BD
     public static function getConnection(){
-        if (self::$instance == null) {
-            //configurações de conexão com bd
-            $host       ='localhost';
-            $db         ='sistema_usuarios';
-            $user       ='root';
-            $password   =' ';
-            //a coexão usa o driver  mysql (mysql:) e as informações  de host e bd
+        if(!self::$instance){
+            $host       = 'localhost';
+            $db         = 'sistema_usuarios_3b';
+            $user       = 'root';
+            $password   = '';
+ 
+            // A conexão usa o drive Mysql (mysql:) e as informações de host e BD
             self::$instance = new PDO("mysql:host=$host;dbname=$db", $user, $password);
-           //define o modo de erro para execeções, facilitando a depuração e tratamento do erro
-            self::$instance->setAttribute(PDO:ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+ 
+            // Define o modo de erro para exceções, facilitando a depuração e tratamento dos erros
+            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return self::$instance;
     }

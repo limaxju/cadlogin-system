@@ -12,7 +12,7 @@ $dashboardController = new DashboardController(); //instancia o controlador de d
 
 //Coleta a ação de URL, se não houver ação definida, usa 'login' como padrão
 
-$acao = $_GET['acao'] ?? 'login'; //Usa operador de coalescencia nula (??) para definir 'login' se 'action' não estiver presente
+$action = $_GET['acao'] ?? 'login'; //Usa operador de coalescencia nula (??) para definir 'login' se 'action' não estiver presente
 
 switch($action){
     case 'login':
@@ -23,7 +23,7 @@ switch($action){
          break;
          default:
             $authController->login();
-        break;
+            break;
 }
 
 ?>
