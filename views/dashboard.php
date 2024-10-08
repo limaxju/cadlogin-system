@@ -8,23 +8,26 @@
     <link rel="stylesheet" type='text/css' media='screen' href="">
 </head>
  
-<body class=""> <!-- Define a classe com base no perfil -->
+<body class="<?php $_SESSON['perfil']?>"> <!-- Define a classe com base no perfil -->
     <div class="container">
-        <h1>Bem-vindo, Usuario!</h1>
-        <p>Esta é a visão do perfil PERFIL.</p>
+        <h1>Bem-vindo, <?php $_SESSON['perfil']?>!</h1>
+        <p>Esta é a visão do perfil <?php $_SESSON['perfil']?>.</p>
+ 
+        <?php if ($_SESSON['perfil']== 'admin'): ?>
             <!-- Admin pode gerenciar usuários (editar e excluir) -->
             <a href="index.php?action=list" class="btn">Gerenciar Usuários (Admin)</a>
- 
+        <?php elseif ($_SESSON['perfil']== 'gestor'): ?>
             <!-- Gestor pode gerenciar usuários (apenas editar) -->
             <a href="index.php?action=list" class="btn">Gerenciar Usuários (Gestor)</a>
-            <p>Área exclusiva do Gestor.</p>
  
+            <p>Área exclusiva do Gestor.</p>
+        <?php else: ?>
             <p>Área exclusiva do Colaborador.</p>
+        <?php endif; ?>
  
         <br><br><br><br>
         <!-- Link para logout -->
-        <a href="" class="btn">Logout</a>
+        <a href="index.php?action=logout" class="btn">Logout</a>
     </div>
 </body>
- 
 </html>
