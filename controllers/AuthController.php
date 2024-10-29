@@ -5,7 +5,7 @@ require_once 'models/user.php';
 class AuthController
 {
     // Função responsável processo de login
-    public function login(){
+    public function login()
     {
         // Verifica se a requisição HTTP é do topo POST, ou seja, se o formulário foi enviado
         if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -30,7 +30,8 @@ class AuthController
         }else{
             include 'views/login.php';
         }
-        }
+    }
+        
           // Função responsável por fazer o logout (encerrar a sessão do usuário)
         public function logout(){
             // Indicar a sessão para destrui-la
@@ -40,8 +41,8 @@ class AuthController
             // Redirenciou o usuário para a página inicical
             header('Location: index.php');
         }
-    }
-    }
+    
+}
  
  
  
