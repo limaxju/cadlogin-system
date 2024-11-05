@@ -53,5 +53,10 @@ public static function update($id, $data){
     $stmt->execute($data);
 
 }
+//função para exclusão de usuario pelo id
+public static function delete($id) {
+    $conn = Database::getConnection();
+    $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
+    $stmt->execute(["id" => $id]);
 }
 ?>
