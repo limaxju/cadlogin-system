@@ -195,3 +195,5 @@ Esta pasta contém as páginas da interface do sistema. Cada arquivo PHP tem um 
 ## Execução
 
 https://github.com/user-attachments/assets/1c58f938-5fb9-424f-9245-bb1037b5d927
+ 
+ 
