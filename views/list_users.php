@@ -40,7 +40,8 @@ if (isset($_SESSION["perfil"])):
 
                         <?php if ($_SESSION["perfil"] == "admin"): ?>
                             <a href="index.php?action=delete&id=<?= $user['id']?>" class="btn btn-delete"
-                            onclick="return confirm('tem certeza que deseja excluir?')">excluir</a>
+                            onclick="return confirm('tem certeza que deseja excluir?')">excluir</
+                            <a href="">Excluir</a>
                         <?php endif; ?>
                     </td>
                 </tr>
