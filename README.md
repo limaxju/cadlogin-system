@@ -191,3 +191,6 @@ Esta pasta contém as páginas da interface do sistema. Cada arquivo PHP tem um 
 
 - O sistema de login utiliza **sessões** para manter o usuário autenticado.
 - O controle de permissões de acesso é feito através do valor de `$_SESSION['perfil']` para determinar as ações permitidas.
+ 
+ ## Execução
+![](IMG/execu%C3%A7ao.mp4)
