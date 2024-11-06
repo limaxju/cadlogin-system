@@ -7,7 +7,7 @@ class Database{
     public static function getConnection(){
         if(!self::$instance){
             $host       = 'localhost';
-            $db         = 'sistema_usuarios_3b';
+            $db         = 'sistema_usuario';
             $user       = 'root';
             $password   = '';
  
