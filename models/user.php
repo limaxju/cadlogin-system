@@ -59,4 +59,4 @@ public static function delete($id) {
     $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
     $stmt->execute(["id" => $id]);
 }
-\end{code}
+?>
