@@ -28,7 +28,7 @@ class UserController
         include "views/list_users.php";
     }
     public function edit($id){
-        session_star();
+        session_start();
 
         if($_SESSION['perfil']== 'admin'|| $_SESSION['perfil']== 'gestor'){
 

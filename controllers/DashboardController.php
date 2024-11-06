@@ -4,6 +4,7 @@ class DashboardController
 {
     // Inicia uma sessão para vereficar se o usuário está autenticado
     public function index(){
+
         session_start();
        
         if(!isset($_SESSION['usuario_id'])){

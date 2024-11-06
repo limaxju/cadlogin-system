@@ -36,7 +36,7 @@ switch($action)
         break;
         case "delete";
         $id = $_GET['id'];
-        $userController->delet($id);
+        $userController->delete($id);
         break;
     default:
         $authController->login();

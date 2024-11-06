@@ -10,11 +10,11 @@
         <form action="index.php?action=login"method="post">
             <section>
             <label for="email">Email</label>
-        <input type="email" name="email"placeholer="email" requerid>
+        <input type="email" name="email" placeholer="email" requerid>
             </section>
             <section>
                 <label for="">Senha</label>
-                <input type="password" name="senha"placeholer="Senha" required>
+                <input type="password" name="senha" placeholer="Senha" required>
             </section>
             <button type="submit">Login</button>
         </form>
